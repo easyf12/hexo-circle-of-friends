@@ -113,6 +113,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "Update data.json"
+        push-branch: 'output'
         files: data.json
         rebase: 'true'
         name: github-actions[bot]

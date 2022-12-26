@@ -112,12 +112,11 @@ jobs:
       uses: github-actions-x/commit@v2.9
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: "Update data.json"
         push-branch: 'output'
-        files: data.json
-        rebase: 'true'
+        force-push: 'true'
+        commit-message: 'Generate Json'
         name: github-actions[bot]
-        email: github-actions@noreply.github.com
+        email: github-actions[bot]@noreply.github.com
 
     - name: keep alive
       uses: gautamkrishnar/keepalive-workflow@master # keep workflows from being suspended when no commit for a long time

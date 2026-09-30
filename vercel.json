@@ -3,6 +3,13 @@
   "headers": [
     {
       "source": "/(.*)",
+      "version": 2,
+      "builds": [
+      { "src": "api/main.py", "use": "@vercel/python" }
+      ],
+      "rewrites": [
+      { "source": "/(.*)", "destination": "/api" }
+      ]
       "installCommand": "dnf install -y libxml2-devel libxslt-devel && npm install",
       "headers": [
         {

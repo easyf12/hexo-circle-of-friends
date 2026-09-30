@@ -1,15 +1,9 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/main.py"
-      "installCommand": "dnf install -y libxml2-devel libxslt-devel && npm install"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
+      "installCommand": "dnf install -y libxml2-devel libxslt-devel && npm install",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
